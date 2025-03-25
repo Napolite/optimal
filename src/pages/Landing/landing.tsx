@@ -46,7 +46,7 @@ function Landing() {
   ];
 
   return (
-    <div className="w-[80%] mx-auto mt-[50px] ">
+    <div className=" mx-auto mt-[50px] ">
       <div className="w-full h-[571px] flex justify-between">
         <div className="h-[437px] my-auto">
           <div className="text-[53px] font-[700] w-[697px] leading-[129%] mb-[20px] tracking-[-6%]">
@@ -77,21 +77,27 @@ function Landing() {
 
       {/* Key Feature*/}
 
-      <div className="mt-[100px]">
-        <div>
+      <div className="mt-[80px]">
+        <div className="mb-[20px]">
           <p className="text-[50px] font-[700] tracking-[-6%] leading-[129%]">
             Key Feature
           </p>
-          <p>Simplify your workflow with next gen features</p>
+          <p className="w-[697px] text-[19px] text-[rgba(110,110,110,1)] mb-[20px] tracking-[-6%] leading-[156%]">
+            Simplify your workflow with next gen features
+          </p>
         </div>
-        <div className="grid grid-cols-3 gap-[20px] mt-[20px]">
+        <div className="grid grid-cols-3 gap-x-[100px] gap-y-[20px] mt-[20px]">
           {features.map((feature) => (
             <div>
-              <div>
+              <div className="w-[57px] h-[57px] bg-[#000000] text-[#ffffff] flex items-center justify-center shadow-[_-7px_8px_20px_0px_rgba(0,0,0,0.58)]">
                 <feature.img size={24} />
               </div>
-              <div>{feature.title}</div>
-              <div>{feature.description}</div>
+              <div className="text-[26px] font-[700] leading-[129%] tracking-[-6% mt-[20px]">
+                {feature.title}
+              </div>
+              <div className="w-[387px] text-[18px] text-[rgba(110,110,110,1)] mb-[20px] tracking-[-6%] leading-[156%] h-[56px] mt-[12px]">
+                {feature.description}
+              </div>
             </div>
           ))}
         </div>
