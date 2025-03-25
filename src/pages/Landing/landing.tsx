@@ -46,21 +46,25 @@ function Landing() {
   ];
 
   return (
-    <div className="w-[83.3%] mx-auto mt-[50px] ">
+    <div className="w-[80%] mx-auto mt-[50px] ">
       <div className="w-full h-[571px] flex justify-between">
         <div className="h-[437px] my-auto">
-          <div className="text-[53px] font-[700] w-[697px] leading-[-6px] mb-[50px]">
-            Streamline work flow <br />
-            With AI powered solution
+          <div className="text-[53px] font-[700] w-[697px] leading-[129%] mb-[20px] tracking-[-6%]">
+            Streamline Work Flow <br />
+            With AI Powered Solution
           </div>
-          <div className="w-[697px] text-[20px] mt-[18px]">
+          <div className="w-[697px] text-[19px] text-[rgba(110,110,110,1)] mb-[20px] tracking-[-6%] leading-[156%]">
             Transform your processes with an intelligent AI platform that
             optimizes efficiency, enhances decision-making, and adapts to your
             unique needs.
           </div>
-          <div>
-            <button>Try for free</button>
-            <button>Watch Demo</button>
+          <div className="flex w-[374px] justify-between mt-[20px] mb-[70px]">
+            <button className="w-[168px] h-[58px] bg-[#000000] text-[#ffffff]">
+              Try for free
+            </button>
+            <button className="w-[168px] h-[58px] ring ring-1-[#000000]">
+              Watch Demo
+            </button>
           </div>
           <div>
             <p>Companies who trust us</p>
@@ -73,10 +77,23 @@ function Landing() {
 
       {/* Key Feature*/}
 
-      <div>
+      <div className="mt-[100px]">
         <div>
-          <p>Key Feature</p>
+          <p className="text-[50px] font-[700] tracking-[-6%] leading-[129%]">
+            Key Feature
+          </p>
           <p>Simplify your workflow with next gen features</p>
+        </div>
+        <div className="grid grid-cols-3 gap-[20px] mt-[20px]">
+          {features.map((feature) => (
+            <div>
+              <div>
+                <feature.img size={24} />
+              </div>
+              <div>{feature.title}</div>
+              <div>{feature.description}</div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
