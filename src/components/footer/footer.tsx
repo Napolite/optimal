@@ -30,21 +30,21 @@ function Footer() {
         <div className="text-[19px] font-[700] leading-[100%] mb-[10px]">
           Socials
         </div>
-        <div className="flex items-center mb-[16px] gap-[12px] text-[18px] text0[rgba(35,35,35,1)] font-[500]">
+        <div className="flex items-center mb-[16px] gap-[12px] text-[18px] text0[rgba(35,35,35,1)] font-[500] ">
           <SlSocialFacebook />
-          <p className="inline">Facebook</p>
+          <p className="">Facebook</p>
         </div>
-        <div className="flex items-center mb-[16px] gap-[12px] text-[18px] text0[rgba(35,35,35,1)] font-[500]">
+        <div className="flex items-center mb-[16px] gap-[12px] text-[18px] text0[rgba(35,35,35,1)] font-[500] ">
           <CiLinkedin />
-          <p className="inline">Linkedin</p>
+          <p className="">Linkedin</p>
         </div>
-        <div className="flex items-center mb-[16px] gap-[12px] text-[18px] text0[rgba(35,35,35,1)] font-[500]">
+        <div className="flex items-center mb-[16px] gap-[12px] text-[18px] text0[rgba(35,35,35,1)] font-[500] ">
           <GrGithub />
-          <p className="inline">Github</p>
+          <p className="">Github</p>
         </div>
-        <div className="flex items-center mb-[16px] gap-[12px] text-[18px] text0[rgba(35,35,35,1)] font-[500]">
+        <div className="flex items-center mb-[16px] gap-[12px] text-[18px] text0[rgba(35,35,35,1)] font-[500] ">
           <LuInstagram />
-          <p className="inline">Instagram</p>
+          <p className="">Instagram</p>
         </div>
       </div>
       <div className="w-[163px]">
