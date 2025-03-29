@@ -12,3 +12,17 @@
 }
 
 
+@keyframes earthRotate {
+  0% { transform: rotate3d(0, 1, 0, 0deg); }
+  20% { transform: rotate3d(0, 1, 0, 25deg); }
+  40% { transform: rotate3d(0, 1, 0, -25deg); }
+  60% { transform: rotate3d(0, 1, 0, 25deg); }
+  80% { transform: rotate3d(0, 1, 0, -25deg); }
+  100% { transform: rotate3d(0, 1, 0, 0deg); }
+
+}
+
+.illusion {
+  animation: earthRotate 8s linear infinite;
+  transform-origin: center;
+}

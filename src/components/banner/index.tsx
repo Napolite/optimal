@@ -12,7 +12,7 @@ function Banner() {
           Start Now
         </button>
       </div>
-      <img src={Solution} />
+      <img src={Solution} className="animated-shape" />
     </div>
   );
 }

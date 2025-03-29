@@ -72,7 +72,7 @@ function Landing() {
           </div>
         </div>
 
-        <img src={LandingImg} className="h-full w-[410px]" />
+        <img src={LandingImg} className="h-full w-[410px] illusion" />
       </div>
 
       {/* Key Feature*/}
