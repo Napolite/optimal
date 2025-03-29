@@ -1,52 +1,59 @@
-function PriceBox() {
-  const plans = [
-    {
-      name: "Basic Plan",
-      pricing: {
-        monthly: 79.99,
-        quarterly: 239.97,
-        yearly: 959.88,
-      },
-      perks: [
-        "Intelligent Data Processing for small datasets",
-        "AI-Powered Chatbots with basic functionalities",
-        "Limited Sentiment Analysis (up to 500 entries/month)",
-        "Standard support and onboarding",
-      ],
-    },
-    {
-      name: "VIP Plan",
-      pricing: {
-        monthly: 119.99,
-        quarterly: 359.97,
-        yearly: 1439.88,
-      },
-      perks: [
-        "Advanced Data Processing with real-time analytics",
-        "AI-Powered Chatbots with customization options",
-        "Fraud Detection capabilities",
-        "Sentiment Analysis for medium-scale projects (up to 2,000 entries/month)",
-        "Priority email support",
-      ],
-    },
-    {
-      name: "Premium Plan",
-      pricing: {
-        monthly: 169.69,
-        quarterly: 509.07,
-        yearly: 2036.28,
-      },
-      perks: [
-        "Unlimited Data Processing with predictive analytics",
-        "AI-Powered Chatbots with multilingual support",
-        "Fraud Detection with advanced alerting",
-        "Comprehensive Sentiment Analysis (unlimited entries)",
-        "Image Recognition and Adaptive Learning Models",
-      ],
-    },
-  ];
-
-  return <></>;
+function PriceBox({
+  plan,
+  pricing,
+}: {
+  plan: {
+    name: string;
+    pricing: { monthly: number; quarterly: number; yearly: number };
+    perks: string[];
+    bg: string;
+    text: string;
+  };
+  pricing: "Monthly" | "Yearly";
+}) {
+  return (
+    <>
+      <div>
+        <div
+          className={`h-[547px] w-[387px] bg-[${plan?.bg}] ring-1 ring-[#000000] pt-[20px]`}
+        >
+          <div className="w-[339px] mx-auto">
+            <p
+              className={`text-[20px] leading-[117%] font-[700] mb-[10px] text-[${plan?.text}]`}
+            >
+              {plan?.name}
+            </p>
+            <p
+              className={`text-[48px] leading-[117%] font-[700] mb-[25px] text-[${plan?.text}]`}
+            >
+              $
+              {pricing === "Monthly"
+                ? plan?.pricing?.monthly
+                : plan?.pricing?.yearly}
+            </p>
+            <button className="bg-[rgba(240,240,240,1)] w-[339px] h-[58px] rounded-[1px] text-[18.18px] leading-[150%] font-[700] ring-1 ring-[#000000]">
+              Subscribe
+            </button>
+          </div>
+          <div className="w-[339px] mx-auto mt-[50px]">
+            <ul className="list-disc pl-5">
+              {plan?.perks?.map((perk) => (
+                <li
+                  className={`mb-[10px] text-[18.18px] font-[700] ${
+                    plan?.bg === "#000000"
+                      ? `text-[${plan?.text}]`
+                      : "text-[rgba(110,110,110,1)]"
+                  }`}
+                >
+                  {perk}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default PriceBox;
