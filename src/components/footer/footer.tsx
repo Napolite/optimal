@@ -30,7 +30,7 @@ function Footer() {
       </div>
       <div className="w-[163px]">
         <div className="text-[19px] font-[700] leading-[100%] mb-[10px]">
-          Terms and policy
+          Terms and polic
         </div>
         <div className="text-[18px] leading-[30px] text-[rgba(35,35,35,1)] font-[500] mb-[16px]">
           Terms of use
