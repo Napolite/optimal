@@ -15,7 +15,7 @@ function PriceBox({
     <>
       <div>
         <div
-          className={`h-[547px] w-[387px] bg-[${plan?.bg}] ring-1 ring-[#000000] pt-[20px]`}
+          className={`h-[547px] w-[387px] bg-[${plan?.bg}] ring-1 ring-[#000000] pt-[10px]`}
         >
           <div className="w-[339px] mx-auto">
             <p
@@ -35,7 +35,7 @@ function PriceBox({
               Subscribe
             </button>
           </div>
-          <div className="w-[339px] mx-auto mt-[50px]">
+          <div className="w-[339px] mx-auto mt-[30px]">
             <ul className="list-disc pl-5">
               {plan?.perks?.map((perk) => (
                 <li
